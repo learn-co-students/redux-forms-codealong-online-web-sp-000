@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class CreateTodo extends Component {
   state = { text: "" };
@@ -7,10 +8,18 @@ class CreateTodo extends Component {
     this.setState({ text: e.target.value });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.dispatch({
+      type: "ADD_TODO",
+      payload: this.state
+    });
+  };
+
   render() {
     return (
       <div>
-        <form onSubmit={form => this.handleSubmit(form)}>
+        <form onSubmit={event => this.handleSubmit(event)}>
           <p>
             {"Add Todo: "}
             <input
@@ -27,4 +36,4 @@ class CreateTodo extends Component {
   }
 }
 
-export default CreateTodo;
+export default connect()(CreateTodo);
