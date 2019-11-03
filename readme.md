@@ -7,7 +7,7 @@ using the Redux pattern.
 
 ## Objectives
 
-By the end of this lesson, you will be able to:
+By the end f this lesson, you will be able to:
 
 - Take user input from our **React** application and send information to **Redux**
 
