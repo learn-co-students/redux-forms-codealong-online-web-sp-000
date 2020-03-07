@@ -18,6 +18,7 @@ class CreateTodo extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.addTodo({ type: 'ADD_TODO', payload: this.state });
+    //console.log(this.state);
   }
 
   render() {
