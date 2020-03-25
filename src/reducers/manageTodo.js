@@ -1,7 +1,8 @@
 export default function manageTodo(state = {
   todos: [],
 }, action) {
-  case 'ADD_TODO':
+  switch(action.type) {
+    case 'ADD_TODO':
  
     console.log({ todos: state.todos.concat(action.payload.text) });
 
@@ -9,4 +10,5 @@ export default function manageTodo(state = {
 
   default:
     return state;
+  }
 }
