@@ -5,11 +5,12 @@ import manageTodo from './reducers/manageTodo';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-let store = createStore(manageTodo);
+let store = createStore(manageTodo); //create store
 
-ReactDOM.render(
-  <Provider store={store}>
+ReactDOM.render( //pass the store to the provider to allow access when we connect components
+  <Provider store={store}> 
     <App />
   </Provider>,
   document.getElementById('root')
 );
+ 
