@@ -1,13 +1,21 @@
+// ./src/components/todos/CreateTodo.js
+ 
 import React, { Component } from 'react'
-
+ 
 class CreateTodo extends Component {
   render() {
     return(
       <div>
-        Create Todo Component
+        <form>
+          <p>
+            <label>add todo</label>
+            <input type="text" />
+          </p>
+          <input type="submit" />
+        </form>
       </div>
-    )
+    );
   }
-}
-
+};
+ 
 export default CreateTodo;
