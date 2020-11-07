@@ -370,8 +370,7 @@ to call a callback on the submission of a form:
 <form onSubmit={ event => this.handleSubmit(event) }>
 
 ...
-```
-
+`
 The **handleSubmit()** function:
 
 ```JavaScript
@@ -430,7 +429,7 @@ class CreateTodo extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => { 
   return {
     addTodo: formData => dispatch({ type: 'ADD_TODO', payload: formData })
   };
