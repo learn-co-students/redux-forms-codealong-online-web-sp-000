@@ -1,4 +1,4 @@
-# Creating Items with Redux
+## Creating Items with Redux
 
 ## Introduction
 
