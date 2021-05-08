@@ -8,6 +8,7 @@ import { createStore } from 'redux';
 let store = createStore(manageTodo);
 
 ReactDOM.render(
+  //gives us access to store 
   <Provider store={store}>
     <App />
   </Provider>,
