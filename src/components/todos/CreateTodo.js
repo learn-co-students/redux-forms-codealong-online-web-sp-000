@@ -20,20 +20,15 @@ class CreateTodo extends Component {
     this.props.addTodo(this.state)
   }
 
-  // handleSubmit = event => {
-  //   event.preventDefault();
-  //   this.props.dispatch({ type: 'ADD_TODO', payload: this.state });
-  // };
-
   render() {
     return(
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <p>
             <label>add todo </label>
             <input type="text" onChange={this.handleChange} value={this.state.text} />
           </p>
-          <input type="submit" onSubmit={event => this.handleSubmit(event)}/>
+          <input type="submit" />
         </form>
       </div>
     )
@@ -50,4 +45,3 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(null, mapDispatchToProps)(CreateTodo);
-// export default connect()(CreateTodo);
